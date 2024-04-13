@@ -3,8 +3,11 @@
 
   inputs = {
     ogmios-src = {
-      url = "github:CardanoSolutions/ogmios/v6.0.1";
       flake = false;
+      type = "github";
+      owner = "Renegatto";
+      repo = "ogmios";
+      rev = "7706369e0ad4377cda7040c803a2db73b4c4a3ff";
     };
 
     haskell-nix = {
@@ -15,7 +18,7 @@
     nixpkgs.follows = "haskell-nix/nixpkgs-unstable";
 
     # TODO: cleanup after cardano-node inputs are fixed
-    cardano-node.url = "github:input-output-hk/cardano-node/8.7.3";
+    cardano-node.url = "github:input-output-hk/cardano-node/8.8.0-pre";
     blank.url = "github:divnix/blank";
 
     # TODO: remove after new testnets land in cardano-node
